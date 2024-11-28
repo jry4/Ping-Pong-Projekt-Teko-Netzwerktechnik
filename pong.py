@@ -37,4 +37,4 @@ def start_pong_server(host, port):
 if __name__ == "__main__":
     HOST = input("Gib die Adresse des Servers ein: ")
     PORT = int(input("Gib den Port des Servers ein (Standard: 12345): "))
-    start_pong_server()
+    start_pong_server(HOST, PORT)
