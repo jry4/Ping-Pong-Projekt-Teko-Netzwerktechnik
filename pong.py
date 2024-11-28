@@ -1,6 +1,6 @@
 import socket
 
-def start_pong_server(host="127.0.0.1", port=12345):
+def start_pong_server(host, port):
     """
     Startet den Pong-Service, der auf eingehende UDP-Pings wartet und
     mit n + 1 antwortet.
