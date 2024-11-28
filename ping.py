@@ -1,7 +1,7 @@
 import socket
 import time
 
-def start_ping_client(server_ip, server_port=12345, initial_spin=0):
+def start_ping_client(server_ip, server_port, initial_spin=0):
     """
     Startet den Ping-Service, der eine Zahl n (spin) an den Pong-Service sendet
     und auf n + 1 antwortet.
