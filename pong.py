@@ -35,4 +35,6 @@ def start_pong_server(host="127.0.0.1", port=12345):
         print(f"Ein unerwarteter Fehler ist aufgetreten: {e}")
 
 if __name__ == "__main__":
+    HOST = input("Gib die Adresse des Servers ein: ")
+    PORT = int(input("Gib den Port des Servers ein (Standard: 12345): "))
     start_pong_server()

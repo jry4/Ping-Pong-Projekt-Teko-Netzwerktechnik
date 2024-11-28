@@ -38,5 +38,6 @@ def start_ping_client(server_ip, server_port=12345, initial_spin=0):
         print(f"Ein unerwarteter Fehler ist aufgetreten: {e}")
 
 if __name__ == "__main__":
-    SERVER_IP = "127.0.0.1"  # Ersetze durch die IP-Adresse des Pong-Servers
-    start_ping_client(SERVER_IP)
+    SERVER_IP = Input("Gib die IP-Adresse des Servers ein: ")  # Userinput für IP des Servers
+    SERVER_PORT = int(intput("Gib den Port des Servers ein (Standard: 12345): "))
+    start_ping_client(SERVER_IP, SERVER_PORT)
