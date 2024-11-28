@@ -39,5 +39,5 @@ def start_ping_client(server_ip, server_port=12345, initial_spin=0):
 
 if __name__ == "__main__":
     SERVER_IP = input("Gib die IP-Adresse des Servers ein: ")  # Userinput für IP des Servers
-    SERVER_PORT = int(intput("Gib den Port des Servers ein (Standard: 12345): "))
+    SERVER_PORT = int(input("Gib den Port des Servers ein (Standard: 12345): "))
     start_ping_client(SERVER_IP, SERVER_PORT)
