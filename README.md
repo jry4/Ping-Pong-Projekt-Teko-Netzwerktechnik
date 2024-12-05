@@ -21,11 +21,12 @@ Ein einfaches Netzwerkprojekt in Python, das aus einem Ping-Client, einem Pong-S
 ---
 
 ## **Installation**
+Die drei Files (pong.py/proxy.py/ping.py/ müssen alle in einer eigeten Konsole gestartet werden
 
 1. Klonen oder laden Sie das Projekt herunter:
    ```bash
-   git clone https://github.com/username/ping-pong-proxy.git
-   cd ping-pong-proxy
+   git clone [https://github.com/username/ping-pong-proxy.git](https://github.com/jry4/Ping-Pong-Projekt-Teko-Netzwerktechnik.git)
+   cd code
 
 2. Starten des pong Servers:
     ```bash
@@ -41,8 +42,7 @@ Ein einfaches Netzwerkprojekt in Python, das aus einem Ping-Client, einem Pong-S
     ```bash
     python3 proxy.py
     ```
-
-
+7. Befolgen der Anweisungen in der Konsole bis er gestartet ist.
 
 
 
