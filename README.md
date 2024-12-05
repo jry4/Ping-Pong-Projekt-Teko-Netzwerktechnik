@@ -1,18 +1,26 @@
-# Ping-Pong-Projekt-Teko-Netzwerktechnik
+# Ping-Pong-Proxy Projekt Teko Netzwerktechnik
 
-## Projektbeschreibung 
-This Project implements Ping-pong Service.
+Ein einfaches Netzwerkprojekt in Python, das aus einem Ping-Client, einem Pong-Server und einem Proxy-Server besteht. Der Client sendet eine Nachricht ("Ping" oder Zahlen) an den Proxy, der sie an den Server weiterleitet. Der Server verarbeitet die Nachricht und sendet eine Antwort zurück.
 
-## Voraussetzungen
-- Python 3.7 or newer
+## **Projektstruktur**
 
-## Installation
-1. clone the repo:
-```bash
-git clone https://github.com/jry4/Ping-Pong-Projekt-Teko-Netzwerktechnik.git
+- `ping.py`: Der Client sendet Nachrichten und wartet auf Antworten.
+- `pong.py`: Der Server verarbeitet Nachrichten und gibt die Antwort zurück.
+- `proxy.py`: Der Proxy vermittelt zwischen Client und Server.
 
-```
-2. Start the file with the command python3 pong.py in the Console
-3. Start the file with the command python3 proxy.py in the next Console
-4. Start the file with the command python3 ping.py in the third Console
-5. Follow the instructions in the Console
+---
+
+## **Voraussetzungen**
+
+- Python 3.x installiert (Prüfen Sie mit `python3 --version`).
+- Netzwerkinfrastruktur, die UDP-Kommunikation erlaubt.
+
+---
+
+## **Installation**
+
+1. Klonen oder laden Sie das Projekt herunter:
+   ```bash
+   git clone https://github.com/username/ping-pong-proxy.git
+   cd ping-pong-proxy
+
