@@ -38,8 +38,8 @@ def start_proxy(proxy_host, proxy_port, server_host, server_port):
         print(f"Ein unerwarteter Fehler ist aufgetreten: {e}")
 
 if __name__ == "__main__":
-    PROXY_HOST = "127.0.0.1"
-    PROXY_PORT = input("Gib den Port des Proxys ein (Standard: 12346): ") or "12346"
+    PROXY_HOST = input("Gib die Adresse des Ping-Servers ein (Standard: 127.0.0.1): ") or "127.0.0.1"
+    PROXY_PORT = input("Gib den Port des Ping-Servers ein (Standard: 12346): ") or "12346"
     SERVER_HOST = input("Gib die Adresse des Pong-Servers ein (Standard: 127.0.0.1): ") or "127.0.0.1"
     SERVER_PORT = input("Gib den Port des Pong-Servers ein (Standard: 12345): ") or "12345"
     start_proxy(PROXY_HOST, int(PROXY_PORT), SERVER_HOST, int(SERVER_PORT))
