@@ -12,7 +12,7 @@ This Project implements Ping-pong Service.
 git clone https://github.com/jry4/Ping-Pong-Projekt-Teko-Netzwerktechnik.git
 
 ```
-2. Start the file pong.py in the Console
-3. Start the file proxy.py in the next Console
-4. Start the file ping.py in the third Console
+2. Start the file with the command python3 pong.py in the Console
+3. Start the file with the command python3 proxy.py in the next Console
+4. Start the file with the command python3 ping.py in the third Console
 5. Follow the instructions in the Console
