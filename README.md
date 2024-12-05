@@ -37,9 +37,11 @@ Ein einfaches Netzwerkprojekt in Python, das aus einem Ping-Client, einem Pong-S
     python3 proxy.py
     ```
 5. Befolgen der Anweisungen in der Konsole bis er gestartet ist.
-6. Starten des ping Servers:
-  ```bash
-    python3 pong.py
+6. Starten des proxy Servers:
+    ```bash
+    python3 proxy.py
+    ```
+
 
 
 
