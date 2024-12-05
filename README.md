@@ -27,13 +27,23 @@ Ein einfaches Netzwerkprojekt in Python, das aus einem Ping-Client, einem Pong-S
    git clone https://github.com/username/ping-pong-proxy.git
    cd ping-pong-proxy
 
-2. Starten des pong Servers: python3 pong.py in einer Console
+2. Starten des pong Servers:
+    ```bash
+    python3 pong.py
+    ```
 3. Befolgen der Anweisungen in der Konsole bis er gestartet ist.
-4. Starten des proxy Servers: python3 proxy.py in einer weiteren Console
+4. Starten des proxy Servers:
+    ```bash
+    python3 proxy.py
+    ```
 5. Befolgen der Anweisungen in der Konsole bis er gestartet ist.
-6. Starten des ping Servers: python3 proxy.py in einer dritten Konsole
-7. Befolgen der Anweisungen in der Konsole bis er gestartet ist.
-8. Ping Pong mit Proxy sollte laufen
+6. Starten des ping Servers:
+  ```bash
+    python3 pong.py
+    ```
+
+
+
    
     
 
