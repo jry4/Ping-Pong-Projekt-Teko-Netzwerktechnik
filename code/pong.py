@@ -4,7 +4,12 @@ def start_pong_server(host, port):
     print(f"Pong-Service läuft auf {host}:{port}...")
     try:
         with socket.socket(socket.AF_INET, socket.SOCK_DGRAM) as server_socket:
-            server_socket.bind((host, port))
+            try:
+                server_socket.bind((host, port))
+            except OSError as e:
+                print(f"Fehler: Port {port} ist bereits belegt. Bitte einen anderen Port verwenden.")
+                return
+
             while True:
                 try:
                     data, addr = server_socket.recvfrom(1024)  # Empfangene Daten

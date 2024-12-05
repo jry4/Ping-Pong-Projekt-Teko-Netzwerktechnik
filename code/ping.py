@@ -6,26 +6,27 @@ def start_ping_client(server_ip, server_port, initial_spin=0):
     try:
         with socket.socket(socket.AF_INET, socket.SOCK_DGRAM) as client_socket:
             spin = initial_spin
+            client_socket.settimeout(5)  # Timeout für den Empfang
             while True:
                 try:
-                    client_socket.sendto(str(spin).encode(), (server_ip, server_port))  # Sende Ping
+                    # Nachricht senden
+                    client_socket.sendto(str(spin).encode(), (server_ip, server_port))
                     print(f"Gesendet: {spin}")
-                    
-                    data, addr = client_socket.recvfrom(1024)  # Empfange Antwort
+
+                    # Antwort empfangen
+                    data, addr = client_socket.recvfrom(1024)
                     try:
-                        response = int(data.decode())  # Konvertiere Antwort zu int
+                        response = int(data.decode())
                         print(f"Antwort erhalten von {addr}: {response}")
-                        spin = response  # Aktualisiere den spin-Wert
+                        spin = response  # Spin-Wert aktualisieren
                     except ValueError:
                         print(f"Fehler: Ungültige Antwort vom Server: {data.decode()}")
-                        continue
 
                 except socket.timeout:
-                    print("Zeitüberschreitung beim Warten auf Server-Antwort.")
+                    print("Zeitüberschreitung beim Warten auf Server-Antwort. Neuer Versuch...")
                 except socket.error as e:
-                    print(f"Netzwerkfehler: {e}")
-                
-                time.sleep(1)  # Warte 1 Sekunde vor dem nächsten Ping
+                    print(f"Netzwerkfehler: {e}. Verbindung wird erneut versucht.")
+                    time.sleep(1)
 
     except KeyboardInterrupt:
         print("\nPing-Client wurde beendet.")
