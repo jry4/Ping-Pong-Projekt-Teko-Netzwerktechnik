@@ -12,3 +12,6 @@ This Project implements Ping-pong Service.
 git clone https://github.com/jry4/Ping-Pong-Projekt-Teko-Netzwerktechnik.git
 
 ```
+2. Start the file Pong.py in the Console
+3. Start the file Ping.py in the Console
+4. Follow the instructions in the Console
