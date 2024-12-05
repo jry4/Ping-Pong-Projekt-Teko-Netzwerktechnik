@@ -40,7 +40,8 @@ Ein einfaches Netzwerkprojekt in Python, das aus einem Ping-Client, einem Pong-S
 6. Starten des ping Servers:
   ```bash
     python3 pong.py
-    ```
+
+
 
 
 
