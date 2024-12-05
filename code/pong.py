@@ -1,18 +1,13 @@
 import socket
 
 def start_pong_server(host, port):
-    """
-    Startet den Pong-Service, der auf eingehende UDP-Pings wartet und
-    mit n + 1 antwortet.
-    """
     print(f"Pong-Service läuft auf {host}:{port}...")
     try:
         with socket.socket(socket.AF_INET, socket.SOCK_DGRAM) as server_socket:
             server_socket.bind((host, port))
             while True:
                 try:
-                    data, addr = server_socket.recvfrom(1024)  # Empfangene Daten (n)
-                    
+                    data, addr = server_socket.recvfrom(1024)  # Empfangene Daten
                     if not data:
                         print(f"Leere Daten von {addr} erhalten. Überspringe...")
                         continue
@@ -36,5 +31,5 @@ def start_pong_server(host, port):
 
 if __name__ == "__main__":
     HOST = input("Gib die Adresse des Servers ein: ")
-    PORT = int(input("Gib den Port des Servers ein (Standard: 12345): "))
+    PORT = int(input("Gib den Port des Servers ein: "))
     start_pong_server(HOST, PORT)
