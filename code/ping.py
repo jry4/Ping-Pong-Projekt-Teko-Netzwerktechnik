@@ -26,7 +26,8 @@ def start_ping_client(server_ip, server_port, initial_spin=0):
                     print("Zeitüberschreitung beim Warten auf Server-Antwort. Neuer Versuch...")
                 except socket.error as e:
                     print(f"Netzwerkfehler: {e}. Verbindung wird erneut versucht.")
-                    time.sleep(1)
+
+                time.sleep(1)  # Pause zwischen den Pings
 
     except KeyboardInterrupt:
         print("\nPing-Client wurde beendet.")
@@ -34,6 +35,6 @@ def start_ping_client(server_ip, server_port, initial_spin=0):
         print(f"Ein unerwarteter Fehler ist aufgetreten: {e}")
 
 if __name__ == "__main__":
-    SERVER_IP = input("Gib die IP-Adresse des Servers/Proxys ein: ")
-    SERVER_PORT = int(input("Gib den Port des Servers/Proxys ein: "))
-    start_ping_client(SERVER_IP, SERVER_PORT)
+    SERVER_IP = input("Gib die IP-Adresse des Servers/Proxys ein (Standard: 127.0.0.1): ") or "127.0.0.1"
+    SERVER_PORT = input("Gib den Port des Servers/Proxys ein (Standard: 12346): ") or "12346"
+    start_ping_client(SERVER_IP, int(SERVER_PORT))
